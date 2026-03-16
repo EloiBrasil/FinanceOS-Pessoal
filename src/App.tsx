@@ -135,8 +135,8 @@ const EVOLUTION_DATA: any[] = [];
 
 // --- Components ---
 
-const Card = ({ children, className }: { children: React.ReactNode; className?: string; key?: any }) => (
-  <div className={cn("bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden", className)}>
+const Card = ({ children, className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
+  <div className={cn("bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden", className)} {...props}>
     {children}
   </div>
 );
